@@ -1,0 +1,62 @@
+header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 60px;
+    background: #6e4b9e;
+    padding: 0 10px;
+    color: #fff;
+    line-height: 50px;
+}
+
+header h1 {
+    display: inline;
+    vertical-align: middle;
+}
+
+header img {
+    height: 32px;
+    vertical-align: text-top;
+}
+
+#search {
+    display: flex;
+    --width: 500px;
+    --height: 32px;
+    position: absolute;
+    width: var(--width);
+    height: var(--height);
+    left: calc(50% - (var(--width) / 2));
+    top: calc(50% - (var(--height) / 2));
+    background: #fff;
+
+}
+
+#search input {
+    padding: 0 5px 0 5px;
+    flex: 1 0;
+    border: 0;
+    background: transparent;
+}
+
+#search button {
+    line-height: 100%;
+    background: transparent;
+    border: 0;
+    width: var(--height)
+}
+
+#search button:hover {
+    font-weight: bold;
+}
+
+main {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #fafafa;
+    padding: 10px;
+}
