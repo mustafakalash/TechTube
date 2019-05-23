@@ -8,6 +8,7 @@ header {
     padding: 0 10px;
     color: #fff;
     line-height: 50px;
+    z-index: 2;
 }
 
 header h1 {
@@ -22,41 +23,83 @@ header img {
 
 #search {
     display: flex;
-    --width: 500px;
-    --height: 32px;
     position: absolute;
-    width: var(--width);
-    height: var(--height);
-    left: calc(50% - (var(--width) / 2));
-    top: calc(50% - (var(--height) / 2));
+    right: 10px;
+    top: calc(50% - 16px);
+    left: 200px;
+    height: 32px;
     background: #fff;
-
 }
 
 #search input {
     padding: 0 5px 0 5px;
-    flex: 1 0;
     border: 0;
     background: transparent;
+    min-width: 0;
+    flex: 1 1;
 }
 
 #search button {
     line-height: 100%;
-    background: transparent;
+    background: #ccc;
     border: 0;
-    width: var(--height)
+    width: var(--height);
+    cursor: pointer;
 }
 
 #search button:hover {
-    font-weight: bold;
+    background: #eee;
 }
 
 main {
+    display: grid;
     position: absolute;
     top: 60px;
     right: 0;
     bottom: 0;
     left: 0;
-    background: #fafafa;
-    padding: 10px;
+    padding: 25px;
+    grid-template-columns: repeat(auto-fill, 210px);
+    grid-auto-rows: min-content;
+    gap: 25px;
+    justify-content: center;
+    place-items: stretch center;
+}
+
+.video {
+    position: relative;
+    width: 210px;
+    height: 118px;
+    overflow: hidden;
+}
+
+.video img {
+    width: 100%;
+}
+
+.video span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    color: #fff;
+    background: rgba(110, 75, 158, .9);
+    text-align: center;
+    padding: 2.5px;
+    box-sizing: border-box;
+}
+
+#addVideo {
+    width: 210px;
+    height: 118px;
+    background: #ccc;
+    color: #999;
+    font-size: 5em;
+    border: 0;
+    cursor: pointer;
+}
+
+#addVideo:hover {
+    background: #ddd;
 }
